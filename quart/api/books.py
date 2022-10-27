@@ -62,7 +62,6 @@ def index():
 async def all_books():
     db = await _get_db()
     all_books = await db.fetch_all("SELECT * FROM books;")
-
     return list(map(dict, all_books))
 
 
